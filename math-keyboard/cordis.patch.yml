@@ -1,0 +1,3 @@
+- insert:
+    - id: math-symbol-keyboard
+      name: '@local/math-symbol-keyboard'

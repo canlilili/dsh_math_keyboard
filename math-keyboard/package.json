@@ -1,0 +1,40 @@
+{
+  "name": "@local/math-symbol-keyboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Math, Greek-letter and LaTeX template keyboard for the DeepSeek Harness conversation composer",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "build.mjs",
+    "src/client.source.js",
+    "third_party/katex.min.js",
+    "third_party/katex-LICENSE.txt",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
